@@ -1,6 +1,6 @@
 <?php
     header("Content-Type: application/json");
-    require_once("../modelo/sintomaEnfermedad.php");
+    require_once("../modelo/modelo_sintomaEnfermedad.php");
     $sintomaEnfermedad = new SintomaEnfermedad();
     switch ($_SERVER['REQUEST_METHOD']) {
         case 'POST':
