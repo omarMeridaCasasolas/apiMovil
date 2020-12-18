@@ -6,7 +6,7 @@
         case 'POST':
             $_POST = json_decode(file_get_contents('php://input'),true);
             $res = $sintomaEnfermedad->obtnerActualizacionesSE($_POST['relacionSE']);
-            $sintomaEnfermedad->cerrarConexion();
+            //$sintomaEnfermedad->cerrarConexion();
             echo $res;
             break;
         default:
