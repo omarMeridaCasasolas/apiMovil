@@ -9,7 +9,7 @@
         }
 
         public function obtnerActualizacionesSE($fecha){
-            $sql = "SELECT * FROM triggers_SE WHERE fecha_SE > :fecha"; 
+            $sql = "SELECT * FROM triggersSE WHERE fecha_SE > :fecha"; 
             $sentenceSQL = $this->connexion_bd->prepare($sql);
             $sentenceSQL->execute(array(":fecha"=>$fecha));
             $respuesta = $sentenceSQL->fetchAll(PDO::FETCH_ASSOC);
