@@ -5,7 +5,7 @@
     switch ($_SERVER['REQUEST_METHOD']) {
         case 'POST':
             $_POST = json_decode(file_get_contents('php://input'),true);
-            $res = $sintomaEnfermedad->obtnerActualizacionesSE($fecha)($_POST['relacionSE']);
+            $res = $sintomaEnfermedad->obtnerActualizacionesSE($_POST['relacionSE']);
             $sintomaEnfermedad->cerrarConexion();
             echo $res;
             break;
