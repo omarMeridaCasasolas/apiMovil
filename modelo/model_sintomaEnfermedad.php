@@ -8,7 +8,7 @@
             $this->connexion_bd=null;
         }
 
-        public function obtnerActualizacionesEnfermedad($fecha){
+        public function obtnerActualizacionesSE($fecha){
             $sql = "SELECT * FROM triggers_SE WHERE fecha_SE > :fecha"; 
             $sentenceSQL = $this->connexion_bd->prepare($sql);
             $sentenceSQL->execute(array(":fecha"=>$fecha));
